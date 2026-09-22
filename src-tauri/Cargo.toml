@@ -1,0 +1,34 @@
+[package]
+name = "soltrack"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Solana memecoin wallet tracker overlay"
+
+[lib]
+name = "soltrack_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+decode.workspace = true
+store.workspace = true
+pnl.workspace = true
+ingest.workspace = true
+sim.workspace = true
+tauri = { version = "2", features = ["protocol-asset"] }
+tauri-plugin-opener.workspace = true
+tauri-plugin-notification.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+anyhow.workspace = true
+thiserror.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+tokio.workspace = true
+tokio-util.workspace = true
+toml.workspace = true
+toml_edit.workspace = true
+async-trait.workspace = true

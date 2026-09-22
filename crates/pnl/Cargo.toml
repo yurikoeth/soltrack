@@ -1,0 +1,11 @@
+[package]
+name = "pnl"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Average-cost-basis PnL per wallet per mint, SOL-denominated, integer math only"
+
+[dependencies]
+decode.workspace = true
+serde.workspace = true
+tracing.workspace = true

@@ -1,0 +1,11 @@
+[package]
+name = "sim"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Paper-trading simulation: what copying a wallet with a delay, slippage and a sizing rule would have returned"
+
+[dependencies]
+decode.workspace = true
+serde.workspace = true
+tracing.workspace = true

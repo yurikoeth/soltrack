@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0b0e14;
+  --color-panel: #11151d;
+  --color-panel2: #161b26;
+  --color-line: #1e2534;
+  --color-fg: #e2e6ee;
+  --color-dim: #8b94a5;
+  --color-faint: #5a6375;
+  --color-up: #3ddc97;
+  --color-down: #ff6b6b;
+  --color-accent: #8b9cf6;
+  --font-mono: "JetBrains Mono", "Cascadia Code", "Consolas", ui-monospace, monospace;
+}
+
+/* Everything is sized in rem; the scale toggle sets this one value. */
+html {
+  font-size: 13px;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  line-height: 1.4;
+  overflow: hidden;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar {
+  width: 0.45rem;
+  height: 0.45rem;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-line);
+  border-radius: 0.25rem;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+.selectable {
+  user-select: text;
+}
+
+@keyframes flash {
+  from {
+    background-color: rgba(139, 156, 246, 0.28);
+  }
+  to {
+    background-color: transparent;
+  }
+}
+.flash {
+  animation: flash 1.4s ease-out;
+}
+
+button {
+  cursor: pointer;
+}

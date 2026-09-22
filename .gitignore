@@ -1,0 +1,11 @@
+/target
+/node_modules
+/dist
+/src-tauri/gen
+/src-tauri/target
+soltrack.toml
+*.db
+*.db-wal
+*.db-shm
+.DS_Store
+tsconfig.tsbuildinfo

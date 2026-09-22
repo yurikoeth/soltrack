@@ -1,0 +1,67 @@
+# Copy to soltrack.toml (repo root) or to your per-user config dir
+# (Windows: %APPDATA%\dev.mangin.soltrack\soltrack.toml). See README.
+
+wallets = [
+  # "7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgAsU",
+]
+
+rpc_url = "https://api.mainnet-beta.solana.com"
+ws_url  = "wss://api.mainnet-beta.solana.com"
+
+initial_backfill = 25
+max_backfill = 500
+commitment = "confirmed"
+feed_limit = 200
+log = "info,soltrack=debug,ingest=debug,decode=debug"
+
+[rate_limit]
+requests_per_second = 4
+burst = 8
+
+# Live-swap alerts (backfilled history never alerts).
+[alerts]
+enabled = true
+min_buy_sol = 0.25        # ignore buys smaller than this
+big_buy_multiple = 3.0    # "big buy" = at least N x the wallet's median buy (0 = off)
+on_sell = false
+notify = true             # OS toast in addition to the in-app alert
+sound = true
+
+[sim]
+enabled = true
+delay_secs = 15
+slippage_pct = 2.0
+mode = "fixed"            # or "fraction" (fraction of target's buy, capped at cap_sol)
+size_sol = 0.1
+fraction = 0.5
+cap_sol = 0.5
+mirror_sells = true
+stop_loss_pct = 0         # 0 = off
+take_profit_pct = 0       # 0 = off
+min_target_buy_sol = 0.05
+
+[discover]
+max_pages = 100
+window = 60
+
+[tokens]
+window_hours = 24
+confluence_wallets = 3
+confluence_minutes = 30
+refresh_secs = 60
+
+[watch]
+mints = []
+poll_secs = 15
+alert_progress_pct = 90
+alert_mcap_sol = 0
+history_points = 240
+
+[launches]
+enabled = true
+keep = 200
+min_dev_buy_sol = 0
+requests_per_second = 1
+
+[ui]
+chart_url = "https://dexscreener.com/solana/{mint}"
