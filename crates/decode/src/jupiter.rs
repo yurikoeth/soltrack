@@ -71,7 +71,7 @@ pub fn decode(tx: &RawTransaction, flat: &[FlatIx<'_>], pos: usize, tracked: &[S
     let net = net_flows(&legs);
     if net.len() != 2 || !net.contains_key(WSOL_MINT) {
         // SOL→SOL arbitrage, token→token, or a multi-token route: not a
-        // memecoin-for-SOL trade we can book.
+        // token-for-SOL trade we can book.
         tracing::debug!(sig = tx.signature(), mints = net.len(), "jupiter route is not a SOL<->token swap");
         return None;
     }

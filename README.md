@@ -1,7 +1,7 @@
 # soltrack
 
 Desktop overlay that follows a list of Solana wallets, decodes their Pump.fun /
-PumpSwap memecoin trades in realtime, and shows running SOL-denominated PnL per
+PumpSwap token trades in realtime, and shows running SOL-denominated PnL per
 wallet. Read-only: no signing, no keys.
 
 Rust + Tauri 2, React/TS/Tailwind webview, SQLite.

@@ -112,7 +112,7 @@ pub struct SwapEvent {
     pub block_time: Option<i64>,
     /// the trader (owner of the token account that changed), base58
     pub wallet: String,
-    /// memecoin mint, base58
+    /// token mint, base58
     pub mint: String,
     pub venue: Venue,
     pub side: Side,

@@ -3,7 +3,7 @@ name = "soltrack"
 version.workspace = true
 edition.workspace = true
 license.workspace = true
-description = "Solana memecoin wallet tracker overlay"
+description = "Solana wallet tracker overlay"
 
 [lib]
 name = "soltrack_lib"
